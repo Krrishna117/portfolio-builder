@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
 
-app.config.from_object(os.environ['APP_SETTINGS'])
+app.config.from_object(onfig.ProductionConfig)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
